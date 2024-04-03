@@ -1,0 +1,41 @@
+conda create --name spatialid python=3.8.8 numpy=1.21.3 pandas=1.2.4 scanpy=1.8.1 pytorch::pytorch=1.8.1 conda-forge::pytorch_geometric=1.7.2
+
+conda activate spatialid
+
+conda info --envs  
+
+
+conda create --name spatialid
+conda create --name spatialid python=3.8.8 numpy=1.21.3 pandas=1.2.4 scanpy=1.8.1 pytorch::pytorch=1.8.1 conda-forge::pytorch_geometric=1.7.2
+conda activate spatialid 
+cd Desktop/spatialID_analysis/
+ls
+cd spatiall_clustering
+ls
+cd code_spatialID
+ls
+mv conda_notes ..
+cd ..
+conda env create -f environment.yml
+conda env export > environment_droplet.yml
+conda --info envs
+conda info --envs  
+conda info
+condaconda install anaconda::numpy=1.22
+conda install anaconda::numpy=1.22
+conda env export > environment.yml
+ls
+conda install conda-forge::matplotlib=3.6.3
+conda env export > environment.yml
+conda install conda-forge::pytorch_geometric=1.7.2
+which pip
+pip install torch_geometric=1.7.2
+pip install torch_geometric==1.7.2
+conda remove torch_geometric
+conda remove pytorch_geometric
+pip install torch_geometric==1.7.2
+pip install torch-scatter
+conda install conda-forge::torchsparse
+conda remove pytorch_geometric
+conda install pyg -c pyg
+pip install torch_geometric==1.7.2
