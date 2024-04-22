@@ -1,0 +1,42 @@
+========login===========
+ssh schen484@discovery.usc.edu
+
+========sftp===========
+sftp schen484@hpc-transfer1.usc.edu
+put myplot1.jpg myplot.jpg
+put -R myplot1.jpg myplot.jpg
+
+========allocate resource===========
+salloc --time=1:00:00 --cpus-per-task=1 --ntasks=1 --mem=128G -p epyc-64 --account=zzhao_873
+
+========cell_ranger===========
+# cell ranger
+module load gcc/11.3.0
+module load cellranger/7.0.0
+cellranger count --id=V350120426control --transcriptome=refdata-gex-GRCh38-2020-A --fastqs=control --sample=V350120426control &
+ 
+========SAW===========
+# singlecell
+singularity build SAW_7.0.sif docker://stomics/saw:07.0.0
+
+
+========sth_else===========
+IDME-M2RP-O62Q-BWVB
+
+
+========dir ref============
+cd /project/zzhao_873/
+
+
+========lasso============
+cd /project/zzhao_873/spatial/data_saw/
+
+singularity exec SAW_7.0.sif lasso -i /project/zzhao_873/spatial/data_saw/TL_C4/SS200000423TL_C4.adjusted.cellbin.gef -m /project/zzhao_873/spatial/lasso/20240420lasso_partcortex_1.geojson -o /project/zzhao_873/spatial/data_saw/TL_C4/lasso_output/ -n SS200000423TL_C4
+
+
+brew install --cask virtualbox &&     brew install --cask vagrant &&     brew install --cask vagrant-manager
+
+chgrp -R zzhao_873 /project/zzhao_873/spatial/
+
+find /project/zzhao_873/spatial -type d -exec chmod g+s {} \;
+
