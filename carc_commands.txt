@@ -26,11 +26,10 @@ IDME-M2RP-O62Q-BWVB
 
 ========dir ref============
 cd /project/zzhao_873/
-
+/project/zzhao_873/spatial/data_saw/TL_C4/lasso_output/partial_cortex_2/SS200000423TL_C4.partial.crtx2.label.cellbin.gef
 
 ========lasso============
 cd /project/zzhao_873/spatial/data_saw/
-
 singularity exec SAW_7.0.sif lasso -i /project/zzhao_873/spatial/data_saw/TL_C4/SS200000423TL_C4.adjusted.cellbin.gef -m /project/zzhao_873/spatial/lasso/20240420lasso_partcortex_1.geojson -o /project/zzhao_873/spatial/data_saw/TL_C4/lasso_output/ -n SS200000423TL_C4
 
 
